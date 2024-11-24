@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Ensure consistent padding and border behavior */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('CEAFA-3D.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        /* Header Text */
+        h1 {
+            font-size: 3.5rem;
+            background-color: rgba(33, 75, 148, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+            margin: 20px auto 10px auto; /* Control spacing below the header */
+        }
+
+        /* About Us Box */
+        .about-box {
+            background-color: rgba(255, 255, 255, 0.75); /* 75% opacity */
+            color: black;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+            margin: 20px auto; /* Center and control spacing */
+        }
+
+        .about-box p {
+            margin-bottom: 20px; /* Add space between paragraphs */
+            text-indent: 2em; /* Add tab space before the first word */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-box {
+                font-size: 0.9rem;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .about-box {
+                font-size: 0.8rem;
+                padding: 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <!-- Header Text -->
+    <h1>ABOUT US</h1>
+
+    <!-- About Us Content -->
+    <div class="about-box">
+        <p>
+            The Smart Parking Monitoring System is a modern web-based application developed by students of the Bachelor of Science in Information Technology, majoring in Network Technology. 
+            Designed as part of their capstone project, this system leverages technology to offer a real-time parking monitoring solution tailored to improve parking management efficiency.
+        </p>
+        <p>
+            By integrating user-friendly features, the system allows user's to monitor the availability of parking spaces instantly, minimizing time wasted in finding spots. 
+            It also promotes better organization and convenience, especially areas such as universities. The project highlights the importance of technological advancements in addressing everyday challenges.
+        </p>
+        <p>
+            This initiative showcases the creativity, and dedication of future IT professionals committed to providing innovative solutions for modern-day problems.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steps to View Parking Area</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('CEAFA-3D.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to the top to prevent cutting off on mobile */
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+        
+        .warn {
+            color:red;
+            font-weight: bold;
+            background: white;
+        }
+
+        /* Container for steps and buttons */
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 900px; /* Limiting the max-width */
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Header Text */
+        h1 {
+            font-size: 40px;
+            background-color: rgba(33, 75, 148, 0.7);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        /* Individual Step Box */
+        .step-box {
+            background-color: rgba(33, 75, 148, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+            display: inline-block;
+            height: auto; /* Allow variable height for content */
+            box-sizing: border-box;
+        }
+
+        /* Step Header */
+        .step-box h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Step Paragraph */
+        .step-box p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Image Box */
+        .image-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px; /* Fixed height for image box */
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .image-box img {
+            max-width: 100%; /* Ensure the image doesn't exceed the box width */
+            max-height: 100%; /* Ensure the image doesn't exceed the box height */
+            width: auto; /* Allow scaling proportionally */
+            height: auto; /* Allow scaling proportionally */
+            object-fit: cover; /* Ensure image fills the box without distortion */
+            border-radius: 8px; /* Match the border-radius of the box */
+        }
+
+        /* Buttons */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        .back-btn, .dashboard-btn {
+            padding: 15px 30px;
+            background-color: #214b94;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 48%;
+        }
+
+        .back-btn:hover, .dashboard-btn:hover {
+            background-color: #1a3c7a;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            .step-box h2 {
+                font-size: 24px;
+            }
+
+            .step-box p {
+                font-size: 16px;
+            }
+
+            .image-box img {
+                width: 90%;
+            }
+
+            .back-btn, .dashboard-btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+
+            .step-box h2 {
+                font-size: 20px;
+            }
+
+            .step-box p {
+                font-size: 14px;
+            }
+
+            .image-box img {
+                width: 100%;
+            }
+
+            .back-btn, .dashboard-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for steps and buttons -->
+    <div class="steps-container">
+        <!-- Header Text -->
+        <h1>Steps to View Parking Area</h1>
+
+        <!-- Step 1 -->
+        <div class="step-box">
+            <h2 class="warn">AVOID MOVING OTHER THING'S AS MUCH AS POSSIBLE</h2>
+            <h2>Step 1: Scroll Down</h2>
+            <p>When you access the dashboard, you'll find a toggle for settings. Scroll upwards until you reach the bottom of the settings.</p>
+            <div class="image-box">
+                <img src="step1.png" alt="Step 1">
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-box">
+            <h2>Step 2: Click &quot;Start Stream&quot;</h2>
+            <p>Click &quot;Start Stream&quot; to view the real-time live feed from the parking area.
+
+</p>
+            <div class="image-box">
+                <img src="step2.png" alt="Select Parking Area">
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-box">
+            <h2>Step 3: Close Toggle </h2>
+            <p>After clicking &quot;Start Stream,&quot; scroll up and close the toggle by selecting the Menu Button or the ☰ icon.</p>
+            <div class="image-box">
+                <img src="step3.png" alt="Parking View">
+            </div>
+        </div>
+
+        <!-- Button Container -->
+        <div class="button-container">
+            <!-- Back Button -->
+            <button class="back-btn" onclick="window.location.href='index.html'">Back</button>
+
+            <!-- Dashboard Button -->
+            <button class="dashboard-btn" onclick="window.location.href='dashboard.html'">Dashboard</button>
+        </div>
+    </div>
+</body>
+</html>

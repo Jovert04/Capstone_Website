@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Smart Parking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('CEAFA-3D.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        /* Header Text */
+        h1 {
+            font-size: 6vw;
+            background-color: rgba(33, 75, 148, 0.7);
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 900px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: black;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Login Form */
+        .login-form-container {
+            background-color: rgba(255, 255, 255, 0.45); /* White background with opacity */
+            border-radius: 8px;
+            padding: 30px;
+            width: 80%;
+            max-width: 500px;
+            box-sizing: border-box; /* Ensures padding is included within the width */
+        }
+
+        .login-form-container input,
+        .login-form-container button {
+            width: 100%; /* Ensures both input and button take the full width */
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding is within the element's width */
+        }
+
+        .login-form-container button {
+            background-color: #214b94;
+            color: white;
+            cursor: pointer;
+        }
+
+        .login-form-container button:hover {
+            background-color: #1a3c7a;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none; /* Hidden by default */
+        }
+
+        /* Eye Icon Styles */
+        .eye-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #214b94;
+        }
+
+        .input-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Text -->
+    <h1>SMART PARKING</h1>
+
+    <!-- Login Form -->
+    <div class="login-form-container">
+        <h2>Admin Login</h2>
+        
+        <!-- Error message -->
+        <div class="error-message" id="error-message">Invalid username or password.</div>
+
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Password" required>
+                <i class="eye-icon" id="toggle-password" onclick="togglePassword()">👁️</i>
+            </div>
+            
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Hardcoded credentials
+        const validUsername = "CEAFA-ADMIN";
+        const validPassword = "#CEAFAKey1";
+
+        // Function to toggle password visibility
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleIcon = document.getElementById("toggle-password");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.textContent = "🙈"; // Change icon to "eye closed"
+            } else {
+                passwordField.type = "password";
+                toggleIcon.textContent = "👁️"; // Change icon to "eye open"
+            }
+        }
+
+        // Function to validate the login credentials
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            if (username === validUsername && password === validPassword) {
+                // Redirect to the admin dashboard
+                window.location.href = "admindashboard.html";
+            } else {
+                // Show an error message
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

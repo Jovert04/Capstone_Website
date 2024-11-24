@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Smart Parking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>SMART PARKING SYSTEM MONITORING - CEAFA</h1>
+        <h2>Enhancing Efficiency using Image Processing</h2>
+        <div class="content">
+            <div class="left-panel">
+                <h2>Live Video Parking</h2>
+                <div class="video-container">
+                    <video id="liveVideo" autoplay muted playsinline width="640" height="480"></video>
+                    <canvas id="parkingCanvas" width="640" height="480"></canvas>
+                </div>
+                <h3 id="channelTitle">Channel No.1</h3>
+                <div class="channels">
+                    <button class="channel-btn" onclick="changeChannel(1)">Channel 1</button>
+                    <button class="channel-btn" onclick="changeChannel(2)">Channel 2</button>
+                </div>
+                <button class="full-screen-btn" onclick="toggleFullScreen()">Full Screen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
